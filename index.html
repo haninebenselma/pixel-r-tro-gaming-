@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIRD - L'Éveil Numérique</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Overlay sombre -->
+        <div class="overlay"></div>
+
+        <!-- En-tête -->
+        <header>
+            <div class="logo">
+                <i class="fas fa-leaf logo-icon"></i>
+                <h1>NIRDWORLD - L'Éveil Numérique</h1>
+            </div>
+            <p class="tagline">La résistance numérique écoresponsable</p>
+
+            <!-- Barre de progression globale -->
+            <div class="global-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="globalProgressFill"></div>
+                </div>
+                <div class="progress-info">
+                    <span id="progressPercentage">0%</span>
+                    <span>• Grade: <span id="userRank">Apprenti Éconumérique</span></span>
+                    <span>• Graines: <span id="seedCount">0</span> <i class="fas fa-seedling"></i></span>
+                </div>
+            </div>
+
+            <!-- Navigation principale -->
+            <nav class="main-nav">
+                <a href="index.html" class="nav-btn active"><i class="fas fa-home"></i> Accueil</a>
+                <a href="chapitre1.html" class="nav-btn" id="chap1Btn"><i class="fas fa-bolt"></i> Chapitre 1</a>
+                <a href="chapitre2.html" class="nav-btn locked" id="chap2Btn"><i class="fas fa-tools"></i> Chapitre 2</a>
+                <a href="chapitre3.html" class="nav-btn locked" id="chap3Btn"><i class="fas fa-map"></i> Chapitre 3</a>
+                <a href="chapitre4.html" class="nav-btn locked" id="chap4Btn"><i class="fas fa-users"></i> Chapitre 4</a>
+                <a href="communaute.html" class="nav-btn"><i class="fas fa-globe"></i> Communauté</a>
+            </nav>
+        </header>
+
+        <!-- Contenu principal -->
+        <main class="chapter-content intro-page">
+            <div class="welcome-message">
+                <h1 class="chapter-title">L'Appel à la Résistance</h1>
+                <p class="chapter-subtitle">Notre école est infiltrée. Rejoins la Résistance NIRD.</p>
+
+                <div class="mission-brief">
+                    <div class="mission-card">
+                        <i class="fas fa-exclamation-triangle mission-icon"></i>
+                        <h3>La Situation</h3>
+                        <p>Le numérique éducatif est devenu lourd, coûteux et peu responsable. Des serveurs énergivores, des logiciels propriétaires, du matériel jeté alors qu'il pourrait être reconditionné...</p>
+                    </div>
+                    <div class="mission-card">
+                        <i class="fas fa-crosshairs mission-icon"></i>
+                        <h3>Ta Mission</h3>
+                        <p>Devenir un Résistant Numérique et aider ton établissement à adopter une approche libre, responsable et durable du numérique. Chaque petit geste compte !</p>
+                    </div>
+                    <div class="mission-card">
+                        <i class="fas fa-medal mission-icon"></i>
+                        <h3>Les Récompenses</h3>
+                        <p>Débloque des compétences, gagne des "Grazines Numériques" et monte en grade dans la communauté NIRD. Ta progression sauvera des ressources et inspirera d'autres !</p>
+                    </div>
+                </div>
+
+                <!-- Terminal interactif -->
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="terminal-title">terminal_nird://accueil</span>
+                    </div>
+                    <div class="terminal-body" id="terminalBody">
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-text" id="terminalMessage">Système prêt. Appuie sur ENTER pour commencer.</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-input" id="terminalInput"></span>
+                            <span class="terminal-cursor">█</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="first-action">
+                    <h3>Premier geste de résistance :</h3>
+                    <p>Désactive les trackers qui ralentissent cette page et consomment de l'énergie inutilement.</p>
+                    <button class="action-btn" id="disableTrackersBtn"><i class="fas fa-shield-alt"></i> Désactiver les trackers</button>
+                    <p class="action-hint" id="actionHint">Appuie sur la touche ESPACE pour une action rapide</p>
+                </div>
+
+                <div class="cta-section">
+                    <h2>Prêt à commencer l'aventure ?</h2>
+                    <p>Commence par le Chapitre 1 : "Le Laboratoire de la Sobriété"</p>
+                    <a href="chapitre1.html" class="start-btn" id="startAdventureBtn"><i class="fas fa-play"></i> Commencer la résistance</a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>NIRD - Numérique Libre, Responsable, Durable</h4>
+                    <p>Une initiative pour un numérique éducatif écoresponsable</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Les 3 piliers</h4>
+                    <ul>
+                        <li><i class="fas fa-handshake"></i> Inclusion</li>
+                        <li><i class="fas fa-balance-scale"></i> Responsabilité</li>
+                        <li><i class="fas fa-leaf"></i> Durabilité</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Suis ta progression</h4>
+                    <div class="progress-save">
+                        <button class="save-btn" id="saveProgressBtn"><i class="fas fa-save"></i> Sauvegarder</button>
+                        <p class="auto-save">Sauvegarde automatique activée</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 NIRD - L'Éveil Numérique | Conçu avec sobriété numérique</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
